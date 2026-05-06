@@ -1,0 +1,12 @@
+name = "csirt-email-relay"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Email event binding — Cloudflare routes emails to this worker
+[triggers]
+# Configured in Cloudflare Dashboard:
+#   Email Routing → Rules → analyze@cyberseguridadciudadana.cc → Worker: csirt-email-relay
+
+# Secrets (set via: wrangler secret put BACKEND_URL)
+# BACKEND_URL       = https://api.cyberseguridadciudadana.cc
+# WEBHOOK_SECRET    = (same as CSIRT_WEBHOOK_SECRET in Laravel .env)
